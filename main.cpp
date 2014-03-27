@@ -176,7 +176,8 @@ int main()
 
 #ifdef DEBUG_YUV
 	memcpy(picture_yuv420p.data[0], mem_y, WIDTH*HEIGHT);
-	memset(picture_yuv420p.data[1], 128, picture_yuv420p.linesize[1]*HEIGHT);
+	memset(picture_yuv420p.data[1], 128, picture_yuv420p.linesize[1]*HEIGHT/2);
+	memset(picture_yuv420p.data[2], 128, picture_yuv420p.linesize[2]*HEIGHT/2);
 	//memcpy(picture_yuv420p.data[1], mem_uv, WIDTH*HEIGHT/4);
 	//memcpy(picture_yuv420p.data[2], mem_uv+WIDTH*HEIGHT/4, WIDTH*HEIGHT/4);
 
